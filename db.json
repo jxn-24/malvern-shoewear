@@ -1,0 +1,39 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "name": "Adidas Samba",
+            "image": "images/adidas_samba.jpg",
+            "price": 3500,
+            "description": "Adidas Samba is a timeless classic that has been around for decades. The shoe is made of leather and has a rubber sole. It is available in different colors and sizes."
+        },
+        {
+            "id": 2,
+            "name": "Nike Airmax 95",
+            "image": "images/nike_airmax95.jpg",
+            "price": 2500,
+            "description": ""
+        },
+        {
+            "id": 3,
+            "name": "Vans Checked",
+            "image": "images/vans_checked.jpg",
+            "price": 2000,
+            "description": ""
+        },
+        {
+            "id": 4,
+            "name": "Jordan 4s",
+            "image": "images/jordan_4.jpg",
+            "price": 5000,
+            "description": ""
+        },
+        {
+            "id": 5,
+            "name": "New Balance 9060",
+            "image": "images/newbalance_9060.jpg",
+            "price": 3000,
+            "description": ""
+        }
+    ]
+}
