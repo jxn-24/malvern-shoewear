@@ -1,57 +1,79 @@
-document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
+document.addEventListener('DOMContentLoaded', displayProducts);
 const productsMenu = document.getElementById('products-menu');
 const newProductForm = document.getElementById('new-product');
 
 
-function fetchAndDisplayProducts() {
-    // Show loading state
-    productsMenu.innerHTML = '<h2>Product Catalog</h2><p>Loading products...</p>';
-    
+
+function displayProducts() {
     fetch('http://127.0.0.1:5500/images')
-        .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
             return response.json();
         })
-        .then(data => {
-            displayProducts(data.images);
+        .then(function(products) {
+            renderProducts(products);
         })
-        .catch(error => {
-            console.error('Error:', error);
-            productsMenu.innerHTML = '<h2>Product Catalog</h2><p class="error">Failed to load products. Please try again later.</p>';
+        .catch(function(error) {
+            console.error('Error fetching products:', error);
+            document.getElementById('products-menu').innerHTML += 
+                '<p>Error loading products. Please try again later.</p>';
         });
 }
 
-function displayProducts(products) {
-    // Create product grid
-    const productGrid = document.createElement('div');
-    productGrid.className = 'product-grid';
+
+function renderProducts(products) {
+    const productsMenu = document.getElementById('products-menu');
     
-    products.forEach(product => {
+    
+    const h2 = productsMenu.querySelector('h2');
+    productsMenu.innerHTML = '';
+    productsMenu.appendChild(h2);
+    
+    
+    products.forEach(function(product) {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
-        productCard.dataset.id = product.id;
         
         productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="product-image">
-            <div class="product-info">
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-description">${product.description}</p>
-                <div class="product-footer">
-                    <h4 class="product-price">₹${product.price.toLocaleString()}</h4>
-                    <button class="delete-btn" data-id="${product.id}">Delete</button>
-                </div>
-            </div>
+            <img src="${product.image || ''}" alt="${product.name || 'Product image'}" class="product-image">
+            <h3 class="product-name">${product.name || 'Product Name'}</h3>
+            <h4 class="product-price">${product.price ? `$${product.price}` : '$0.00'}</h4>
+            <button class="delete-btn" data-id="${product.id}">Delete</button>
         `;
         
-        productGrid.appendChild(productCard);
+        productsMenu.appendChild(productCard);
     });
-
-    productsMenu.innerHTML = '<h2>Product Catalog</h2>';
-    productsMenu.appendChild(productGrid);
     
-    // Add delete event listeners
-    document.querySelectorAll('.delete-btn').forEach(btn => {
-        btn.addEventListener('click', deleteProduct);
+    
+    document.querySelectorAll('.delete-btn').forEach(function(button) {
+        button.addEventListener('click', deleteProduct);
     });
 }
+
+
+function deleteProduct(event) {
+    const productId = event.target.getAttribute('data-id');
+    if (!productId) {
+        console.error('No product ID found');
+        return;
+    }
     
+    fetch(`http://127.0.0.1:5500/images/${productId}`, {
+        method: 'DELETE'
+    })
+    .then(function(response) {
+        if (response.ok) {
+            
+            displayProducts();
+        } else {
+            console.error('Failed to delete product');
+        }
+    })
+    .catch(function(error) {
+        console.error('Error deleting product:', error);
+    });
+}
+
+
