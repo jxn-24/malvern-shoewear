@@ -5,35 +5,35 @@
             "name": "Adidas Samba",
             "image": "images/adidas_samba.jpg",
             "price": 3500,
-            "description": "Adidas Samba is a timeless classic that has been around for decades. The shoe is made of leather and has a rubber sole. It is available in different colors and sizes."
+            "description": "Available in black and grey. Size 37-45."
         },
         {
             "id": 2,
             "name": "Nike Airmax 95",
             "image": "images/nike_airmax95.jpg",
             "price": 2500,
-            "description": ""
+            "description": "Available in black,white,blue and grey. Size 41-45."
         },
         {
             "id": 3,
             "name": "Vans Checked",
             "image": "images/vans_checked.jpg",
             "price": 2000,
-            "description": ""
+            "description": "Available in black and grey. Size 38-43."
         },
         {
             "id": 4,
             "name": "Jordan 4s",
             "image": "images/jordan_4.jpg",
             "price": 5000,
-            "description": ""
+            "description": "Available in blue,red,black,grey,white and brown. Size 37-45."
         },
         {
             "id": 5,
             "name": "New Balance 9060",
             "image": "images/newbalance_9060.jpg",
             "price": 3000,
-            "description": ""
+            "description": "Available in white and black. Size 39-42."
         }
     ]
 }

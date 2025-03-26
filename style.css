@@ -2,26 +2,186 @@ body{
     background-color: antiquewhite;
 }
 
-header{
-    background-color: #333;
+#header{
+    background-color: black;
     color: white;
-    padding: 1em;
     text-align: center;
+    top: 0;
+    left: 0;
+    padding: 10px 0px;
+    font-size: 10px;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+}
+#home{
+    text-align: center;
+    box-shadow: 0px 3px 5px 2px ;
+    margin-top: 20px;
+    border-radius: 3px;
 }
 
+h2 {
+
+    text-decoration: underline;
+}
+
+
+
+
 nav{
-    background-color: #333;
-    color: white;
-    padding: 1em;
+    background-color:aliceblue;
+    font-weight: bolder;
+    font-style:italic;
     text-align: center;
+    margin-top: 20px;
+    padding: 10px 0px;
 }
 
 nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content:space-evenly; 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+}
+nav a {
+    text-decoration:none;
+    padding: 8px 16px;  
+  }
+  
+  nav a:hover {
+    color: #007bff; 
+  }
+
+  #products-menu {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
+  }
+
+  #products-menu a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #products-menu a:hover {
+    color: #007bff;
+  }
+
+  #products-menu h2 {
+    text-align: center;
+    margin: 20px;
+  }
+  #products-menu img {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    display: flex;
+  }
+
+
+
+
+
+  #product-detalis {
+    width: 300px;
+    position: relative;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .product-name {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+  }
+
+
+
+
+form{
+    background-color:burlywood;
+    flex-direction:column;
+    display:flex;
+    margin: 20px auto;
+    border-radius: 5px;
+    margin: 80px auto 20px;
+    max-width: 700px;
+    box-shadow: 0px 3px 5px ;
+    justify-content: center;
+
+
+}
+form h5 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
 }
 
+form p{
+    display: flex;
+    margin-bottom: 2px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+form input{
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+    height: 30px;
+    justify-content: center;
+
+
+
+}
+form button{
+    margin-top: 14px;
+    color:black;
+    background-color: burlywood;
+    padding: 10px 10px;
+
+
+
+
+    
+}
+form h4{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
 

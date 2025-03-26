@@ -4,36 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malvern Shoewear</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <NAv>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products-menu">Products</a></li>
-            <li><a href="#product-details">Product Details</a></li>
-        </ul>
-    </NAv>
+    
     <div id="header">
-        <h1>Welcome to Malvern Shoewear</h1>
+        <h1>MALVERN SHOEWEAR</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products-menu">Products</a></li>
+                <li><a href="#new-product">Add New Shoe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        
     </div> 
+    
     
     <main>
         <section id="home">
             <h2>Home</h2>
-            <p>Your one-stop shop for stylish and comfortable footwear.</p>
+            <p>Welcome to Malvern Shoewear. Your one-stop shop for stylish and comfortable footwear.<br> We offer a wide varieties of affordable shoes.</br></p>
+           
         </section>
         <div id="products-menu">
+            <h2>Product Catalog</h2>
+            <img src="" alt="" class="product-image">
+            <h3 class="product-name"></h3>
+            <h4 class="product-price"></h4>
+
+
       </div>
-      <div id = "product-details">
-        <img src="" alt="" class="product-image">
-        <h2 class="product-name"></h2>
-        <h3 class="product-price"></h3>
+      <div class="product-detalis">
+        <div class="image-container">
+          <img src="" alt="">
+          <div class="image-overlay">
+            <h3 class="product-name"></h3>
+            <p class="product-description"></p>
+            <span class="product-price"></span>
+          </div>
+        </div>
+      </div>
         
-    <p class="Price"></p>
+        
+
     </div>
     <form id="new-product" >
-        <h4>Add New Shoe</h4>
+        <h5>New Shoe</h5>
         <p>Name:</p>
         <input type="text" id="shoe-name" placeholder="Shoe Name">
         <p>Brand:</p>
@@ -41,16 +58,26 @@
         <p>Image:</p>
         <input type="url" id="new-image" placeholder="Image url">
         <p>Price:</p>
-        <input type="number" id="new-price" placeholder="">
+        <input type="number" id="new-price" placeholder="Price" min="0" step="0.01">
 
         <button type="submit">Add</button>
 
           
     </main>
+
+    <div id="contact">
+        <h6>Contact Us</h6>
+        <p>For any details and enquiries, kindly reach to us on the following platforms:</p>
+        <ul>
+            <li>Email: <a href="mailto:info@malvernshoewear.com">info@malvernshoewear.com</a></li>
+            <li>Phone: <a href="tel:+254708177065">+254 708 177 065</a></li>
+            <li>Instagram: <a href="https://instagram.com/malvernshoewear" target="_blank">@malvernshoewear</a></li>
+        </ul>
+    </div>
     <footer>
         <p>&copy; 2024 Malvern Shoewear. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
