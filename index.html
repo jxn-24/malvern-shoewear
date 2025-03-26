@@ -5,77 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malvern Shoewear</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <div id="header">
-        <h1>MALVERN SHOEWEAR</h1>
+    <header>
+        <div class="logo">
+            <h1>Malvern Shoewear</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#products-menu">Products</a></li>
                 <li><a href="#new-product">Add New Shoe</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        
-    </div> 
-    
-    
+        </nav>
+    </header>
+
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to Malvern Shoewear. Your one-stop shop for stylish and comfortable footwear.<br> We offer a wide varieties of affordable shoes.</br></p>
-           
+        <section id="search-bar">
+            <input type="text" id="search-input" placeholder="Search for shoes...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
         </section>
-        <div id="products-menu">
+
+        <section id="products-menu">
             <h2>Product Catalog</h2>
-            <img src="" alt="" class="product-image">
-            <h3 class="product-name"></h3>
-            <h4 class="product-price"></h4>
+            <div class="product-grid"></div>
+        </section>
 
-
-      </div>
-      <div class="product-detalis">
-        <div class="image-container">
-          <img src="" alt="">
-          <div class="image-overlay">
-            <h3 class="product-name"></h3>
-            <p class="product-description"></p>
-            <span class="product-price"></span>
-          </div>
-        </div>
-      </div>
-        
-        
-
-    </div>
-    <form id="new-product" >
-        <h5>New Shoe</h5>
-        <p>Name:</p>
-        <input type="text" id="shoe-name" placeholder="Shoe Name">
-        <p>Brand:</p>
-        <input type="text" id="brand" placeholder="Brand">
-        <p>Image:</p>
-        <input type="url" id="new-image" placeholder="Image url">
-        <p>Price:</p>
-        <input type="number" id="new-price" placeholder="Price" min="0" step="0.01">
-
-        <button type="submit">Add</button>
-
-          
+        <section id="new-product">
+            <h2>Add a New Shoe</h2>
+            <form id="add-shoe-form">
+                <label for="shoe-name">Name:</label>
+                <input type="text" id="shoe-name" placeholder="Shoe Name" required>
+                <label for="shoe-brand">Brand:</label>
+                <input type="text" id="shoe-brand" placeholder="Brand" required>
+                <label for="shoe-image">Image URL:</label>
+                <input type="url" id="shoe-image" placeholder="Image URL" required>
+                <label for="shoe-price">Price:</label>
+                <input type="number" id="shoe-price" placeholder="Price" min="0" required>
+                <button type="submit">Add Shoe</button>
+            </form>
+        </section>
     </main>
 
-    <div id="contact">
-        <h6>Contact Us</h6>
-        <p>For any details and enquiries, kindly reach to us on the following platforms:</p>
+    <footer id="contact">
+        <p>For any details and inquiries, kindly reach us on:</p>
         <ul>
-            <li>Email: <a href="mailto:info@malvernshoewear.com">info@malvernshoewear.com</a></li>
-            <li>Phone: <a href="tel:+254708177065">+254 708 177 065</a></li>
-            <li>Instagram: <a href="https://instagram.com/malvernshoewear" target="_blank">@malvernshoewear</a></li>
+            <li><i class="fas fa-envelope"></i> Email: info@malvernshoewear.com</li>
+            <li><i class="fas fa-phone"></i> Phone: +254 708 177 065</li>
+            <li><i class="fab fa-instagram"></i> Instagram: @malvernshoewear</li>
         </ul>
-    </div>
-    <footer>
-        <p>&copy; 2024 Malvern Shoewear. All rights reserved.</p>
+        <p>&copy; 2025 Malvern Shoewear. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js"></script>
