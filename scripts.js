@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
   
-  const BASE_URL = 'http://localhost:3000/images';
+  const BASE_URL = 'https://malvern-shoewear-json-server.vercel.app/images';
   const productsMenu = document.querySelector(".product-grid");
   
   function displayProducts() {
