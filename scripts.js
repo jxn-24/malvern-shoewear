@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
       brand: document.getElementById("shoe-brand").value,
       image: document.getElementById("shoe-image").value,
       price: document.getElementById("shoe-price").value,
+      description: document.getElementById("shoe-description").value,
     };
   
     fetch(BASE_URL, {
